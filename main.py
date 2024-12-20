@@ -4,6 +4,8 @@ sys.path.append('src')
 from sqlalchemy import create_engine
 from src.deviation_calculation import calculate_least_squares
 from src.verification import verify_function, plot_selected_functions
+from src.mapping_data import calculate_max_deviation
+
 
 train_data = pd.read_csv('data/train.csv');
 ideal_data = pd.read_csv('data/ideal.csv');
@@ -38,5 +40,7 @@ print("Selected Ideal functions:",selected_functions)
 #Verify and plot
 verify_function(train_data, ideal_data, selected_functions)
 plot_selected_functions(train_data, ideal_data, selected_functions)
+
+calculate_max_deviation(train_data,ideal_data,selected_functions)
 
 

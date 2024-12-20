@@ -18,6 +18,6 @@ def plot_selected_functions(train_data, ideal_data, selected_functions):
         plot.ylabel('y')
         plot.legend()
         plot.grid(True)
-        plot.show()
+        #plot.show()
 
 
